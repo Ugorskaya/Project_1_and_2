@@ -47,24 +47,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent intent;
-                switch (view.getId()) {
-                    case R.id.buttonWeb:
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://developer.android.com"));
-                        startActivity(intent);
-                        break;
-                    case R.id.buttonMaps:
-                        intent = new Intent();
-                        intent.setAction(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse("geo:55.754283,37.62002"));
-                        startActivity(intent);
-                        break;
-                    case R.id.buttonPhone:
-                        intent = new Intent(Intent.ACTION_DIAL);
-                        intent.setData(Uri.parse("tel:12345"));
-                        startActivity(intent);
-                        break;
-                }
             }
 
         });
